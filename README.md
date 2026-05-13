@@ -130,7 +130,7 @@ Tools
 
 ### 2.2 URL
 
-- [https://rozer4heros.github.io/est_fe_13_1st_project/](https://rozer4heros.github.io/est_fe_13_1st_project/)
+- [https://chaewon5205.github.io/frontendclass13_project1_clone/](https://chaewon5205.github.io/frontendclass13_project1_clone/)
 
 ## 3. 프로젝트 구조
 
