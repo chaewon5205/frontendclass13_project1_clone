@@ -1652,3 +1652,48 @@ header {
 }
 
 /* 권유진 */
+/* popup */
+.project-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  display: none;
+}
+
+.popup-content {
+  padding: 32px;
+}
+
+.popup-content h2 {
+  margin-bottom: 16px;
+}
+
+.popup-content p {
+  line-height: 1.6;
+}
+
+.popup-info {
+  margin-top: 20px;
+}
+
+.popup-bottom {
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-bottom button {
+  border: none;
+  background: #2f6bff;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}

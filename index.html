@@ -1121,5 +1121,63 @@
       </div>
     </footer>
     <!-- //권유진 -->
+     <!-- popup -->
+<div id="popup" class="project-popup">
+  <div class="popup-content">
+    <h2>📢 프로젝트 안내</h2>
+
+    <p>오르미 부트캠프 신청 사이트 리뉴얼 프로젝트</p>
+    <p>본 사이트는 팀 프로젝트 포트폴리오 사이트입니다.</p>
+
+    <div class="popup-info">
+      <p>- 과정명 : 오르미 프론트엔드 13기</p>
+      <p>- 제작 기간 : 2026.00.00 ~ 2026.00.00</p>
+      <p>- 개발환경 : HTML, CSS</p>
+      <p>- 소스 관리 : Github</p>
+    </div>
+
+    <div class="popup-bottom">
+      <div>
+        <input type="checkbox" id="agree" />
+        <label for="agree">하루 동안 보지 않기</label>
+      </div>
+
+      <button id="closeBtn">닫기</button>
+    </div>
+  </div>
+</div>
+<script>
+  const popup = document.querySelector("#popup");
+  const closeBtn = document.querySelector("#closeBtn");
+  const agree = document.querySelector("#agree");
+
+  // 쿠키 확인
+  popup.style.display =
+    document.cookie.includes("popup=hide")
+      ? "none"
+      : "block";
+
+  // 닫기 버튼 클릭
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+
+    // 하루동안 안보기 체크
+    if (agree.checked) {
+      createCookie("popup", "hide", 1);
+    } else {
+      createCookie("popup", "hide", -1);
+    }
+  });
+
+  // 쿠키 생성 함수
+  function createCookie(name, value, expireDay) {
+    let today = new Date();
+
+    today.setDate(today.getDate() + expireDay);
+
+    document.cookie =
+      `${name}=${value}; expires=${today.toUTCString()}; path=/`;
+  }
+</script>
   </body>
 </html>
